@@ -7,15 +7,7 @@ import 'package:nav_example/customer/customer.dart';
 import 'package:nav_example/customer_info/customer_info.dart';
 import 'package:nav_example/login/login.dart';
 import 'package:nav_example/publisher/publisher.dart';
-import 'package:nav_example/go_router_refresh_stream.dart';
-import 'package:nav_example/home_page.dart';
-import 'package:nav_example/page_one.dart';
-import 'package:nav_example/page_two.dart';
-import 'package:nav_example/root_page_one.dart';
-import 'package:nav_example/sub_route_page_one.dart';
-import 'package:nav_example/sub_sub_route_page_one.dart';
-
-import '../publisher_info/view/publisher_info_page.dart';
+import 'package:nav_example/publisher_info/publisher_info.dart';
 
 class AppRouter {
   AppRouter({
