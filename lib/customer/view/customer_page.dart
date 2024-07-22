@@ -19,6 +19,10 @@ class CustomerPage extends StatelessWidget {
             },
           ),
           TextButton(
+            child: Text('Items'),
+            onPressed: () => context.goNamed('items'),
+          ),
+          TextButton(
             child: Text('Logout'),
             onPressed: () {
               context.read<AppBloc>().add(const AppLoggedOut());
