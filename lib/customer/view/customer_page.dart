@@ -16,12 +16,6 @@ class CustomerPage extends StatelessWidget {
               context.goNamed('customerInfo');
             },
           ),
-          // TextButton(
-          //   child: Text('Items'),
-          //   onPressed: () =>
-          //       // ItemsPageRoute().go(context),
-          //        //context.goNamed('items'),
-          // ),
         ],
       ),
     );
