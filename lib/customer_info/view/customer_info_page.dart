@@ -15,12 +15,13 @@ class CustomerInfoPage extends StatelessWidget {
         children: [
           Text('Some info'),
           TextButton(
-              child: Text('Switch to Publisher'),
-              onPressed: () {
-                context
-                    .read<AppBloc>()
-                    .add(const AppTypeChanged(AppType.publisher));
-              }),
+            child: Text('Switch to Publisher'),
+            onPressed: () {
+              context
+                  .read<AppBloc>()
+                  .add(const AppTypeChanged(AppType.publisher));
+            },
+          ),
         ],
       ),
     );

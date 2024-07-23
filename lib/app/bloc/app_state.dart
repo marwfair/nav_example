@@ -8,11 +8,9 @@ enum AppType {
 
 class AppState extends Equatable {
   const AppState({
-    this.signedIn = false,
     this.appType = AppType.unknown,
   });
 
-  final bool signedIn;
   final AppType appType;
 
   AppState copyWith({
@@ -20,14 +18,12 @@ class AppState extends Equatable {
     AppType? appType,
   }) {
     return AppState(
-      signedIn: signedIn ?? this.signedIn,
       appType: appType ?? this.appType,
     );
   }
 
   @override
   List<Object> get props => [
-        signedIn,
         appType,
       ];
 }
