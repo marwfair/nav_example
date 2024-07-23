@@ -7,11 +7,11 @@ class PublisherPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Publisher Home')),
+      appBar: AppBar(title: const Text('Publisher Home')),
       body: Column(
         children: [
           TextButton(
-            child: Text('Publisher Info'),
+            child: const Text('Publisher Info'),
             onPressed: () {
               context.goNamed('publisherInfo');
             },

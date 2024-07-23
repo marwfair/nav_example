@@ -10,21 +10,21 @@ class AppTypePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Column(children: [
-        Text('Select an app type:'),
+        const Text('Select an app type:'),
         TextButton(
             onPressed: () {
               context
                   .read<AppBloc>()
                   .add(const AppTypeChanged(AppType.customer));
             },
-            child: Text('Customer')),
+            child: const Text('Customer')),
         TextButton(
             onPressed: () {
               context
                   .read<AppBloc>()
                   .add(const AppTypeChanged(AppType.publisher));
             },
-            child: Text('Publisher')),
+            child: const Text('Publisher')),
       ]),
     );
   }
