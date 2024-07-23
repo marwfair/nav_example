@@ -4,9 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:nav_example/app_type/app_type.dart';
 import 'package:nav_example/app/bloc/app_bloc.dart';
 import 'package:nav_example/customer/customer.dart';
-import 'package:nav_example/customer_info/customer_info.dart';
 import 'package:nav_example/publisher/publisher.dart';
-import 'package:nav_example/publisher_info/publisher_info.dart';
 
 class AppRouter {
   AppRouter({
@@ -89,13 +87,6 @@ class AppRouter {
 
                 return null;
               },
-              routes: [
-                GoRoute(
-                  name: 'customerInfo',
-                  path: 'customer-info',
-                  builder: (context, state) => const CustomerInfoPage(),
-                ),
-              ],
             ),
             GoRoute(
               name: 'publisher',
@@ -110,13 +101,6 @@ class AppRouter {
 
                 return null;
               },
-              routes: [
-                GoRoute(
-                  name: 'publisherInfo',
-                  path: 'publisher-info',
-                  builder: (context, state) => const PublisherInfoPage(),
-                ),
-              ],
             ),
           ],
         ),

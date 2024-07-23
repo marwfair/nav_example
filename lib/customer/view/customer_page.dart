@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:nav_example/app/bloc/app_bloc.dart';
 
 class CustomerPage extends StatelessWidget {
   const CustomerPage({super.key});
@@ -11,9 +12,11 @@ class CustomerPage extends StatelessWidget {
       body: Column(
         children: [
           TextButton(
-            child: const Text('Customer Info'),
+            child: const Text('Switch to Publisher'),
             onPressed: () {
-              context.goNamed('customerInfo');
+              context
+                  .read<AppBloc>()
+                  .add(const AppTypeChanged(AppType.publisher));
             },
           ),
         ],
