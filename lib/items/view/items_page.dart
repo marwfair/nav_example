@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:nav_example/app_router/routes.dart';
 
 class ItemsPage extends StatelessWidget {
   const ItemsPage({super.key});
@@ -13,8 +14,9 @@ class ItemsPage extends StatelessWidget {
             return ListTile(
               title: Text('Item $index'),
               onTap: () {
-                context.goNamed('itemDetails',
-                    pathParameters: {'id': index.toString()});
+                ItemDetailsPageRoute(id: index).go(context);
+                // context.goNamed('itemDetails',
+                //     pathParameters: {'id': index.toString()});
               },
             );
           },

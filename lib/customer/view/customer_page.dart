@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:nav_example/app/bloc/app_bloc.dart';
+import 'package:nav_example/app_router/routes.dart';
 
 class CustomerPage extends StatelessWidget {
   const CustomerPage({super.key});
@@ -20,7 +21,8 @@ class CustomerPage extends StatelessWidget {
           ),
           TextButton(
             child: Text('Items'),
-            onPressed: () => context.goNamed('items'),
+            onPressed: () =>
+                ItemsPageRoute().go(context), //context.goNamed('items'),
           ),
           TextButton(
             child: Text('Logout'),
