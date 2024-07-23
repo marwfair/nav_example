@@ -9,18 +9,19 @@ class CustomerInfoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Customer Info'),
+        title: const Text('Customer Info'),
       ),
       body: Column(
         children: [
-          Text('Some info'),
+          const Text('Some info'),
           TextButton(
-              child: Text('Switch to Publisher'),
-              onPressed: () {
-                context
-                    .read<AppBloc>()
-                    .add(const AppTypeChanged(AppType.publisher));
-              }),
+            child: const Text('Switch to Publisher'),
+            onPressed: () {
+              context
+                  .read<AppBloc>()
+                  .add(const AppTypeChanged(AppType.publisher));
+            },
+          ),
         ],
       ),
     );
