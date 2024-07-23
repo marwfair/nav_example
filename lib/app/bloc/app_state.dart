@@ -14,7 +14,6 @@ class AppState extends Equatable {
   final AppType appType;
 
   AppState copyWith({
-    bool? signedIn,
     AppType? appType,
   }) {
     return AppState(

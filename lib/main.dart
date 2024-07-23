@@ -27,20 +27,20 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  late final AppRouter _appRouter;
-  // late final TypeSafeRouter _appRouter;
+  // late final AppRouter _appRouter;
+  late final TypeSafeRouter _appRouter;
 
   @override
   void initState() {
     super.initState();
 
-    _appRouter = AppRouter(
-      navigatorKey: GlobalKey<NavigatorState>(),
-    );
-
-    // _appRouter = TypeSafeRouter(
+    // _appRouter = AppRouter(
     //   navigatorKey: GlobalKey<NavigatorState>(),
     // );
+
+    _appRouter = TypeSafeRouter(
+      navigatorKey: GlobalKey<NavigatorState>(),
+    );
   }
 
   @override
