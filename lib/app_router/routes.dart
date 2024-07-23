@@ -44,16 +44,6 @@ class AppTypePageRoute extends GoRouteData {
 @TypedGoRoute<AppRoute>(
   name: 'app',
   path: '/app',
-  routes: [
-    TypedGoRoute<CustomerPageRoute>(
-      name: 'customer',
-      path: 'customer',
-    ),
-    TypedGoRoute<PublisherPageRoute>(
-      name: 'publisher',
-      path: 'publisher',
-    )
-  ],
 )
 @immutable
 class AppRoute extends GoRouteData {
@@ -84,6 +74,10 @@ class AppRoute extends GoRouteData {
   }
 }
 
+@TypedGoRoute<CustomerPageRoute>(
+  name: 'customer',
+  path: '/app/customer',
+)
 @immutable
 class CustomerPageRoute extends GoRouteData {
   @override
@@ -104,6 +98,10 @@ class CustomerPageRoute extends GoRouteData {
   }
 }
 
+@TypedGoRoute<PublisherPageRoute>(
+  name: 'publisher',
+  path: '/app/publisher',
+)
 @immutable
 class PublisherPageRoute extends GoRouteData {
   @override

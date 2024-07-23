@@ -9,6 +9,8 @@ part of 'routes.dart';
 List<RouteBase> get $appRoutes => [
       $appTypePageRoute,
       $appRoute,
+      $customerPageRoute,
+      $publisherPageRoute,
     ];
 
 RouteBase get $appTypePageRoute => GoRouteData.$route(
@@ -38,18 +40,6 @@ RouteBase get $appRoute => GoRouteData.$route(
       path: '/app',
       name: 'app',
       factory: $AppRouteExtension._fromState,
-      routes: [
-        GoRouteData.$route(
-          path: 'customer',
-          name: 'customer',
-          factory: $CustomerPageRouteExtension._fromState,
-        ),
-        GoRouteData.$route(
-          path: 'publisher',
-          name: 'publisher',
-          factory: $PublisherPageRouteExtension._fromState,
-        ),
-      ],
     );
 
 extension $AppRouteExtension on AppRoute {
@@ -69,6 +59,12 @@ extension $AppRouteExtension on AppRoute {
   void replace(BuildContext context) => context.replace(location);
 }
 
+RouteBase get $customerPageRoute => GoRouteData.$route(
+      path: '/app/customer',
+      name: 'customer',
+      factory: $CustomerPageRouteExtension._fromState,
+    );
+
 extension $CustomerPageRouteExtension on CustomerPageRoute {
   static CustomerPageRoute _fromState(GoRouterState state) =>
       CustomerPageRoute();
@@ -86,6 +82,12 @@ extension $CustomerPageRouteExtension on CustomerPageRoute {
 
   void replace(BuildContext context) => context.replace(location);
 }
+
+RouteBase get $publisherPageRoute => GoRouteData.$route(
+      path: '/app/publisher',
+      name: 'publisher',
+      factory: $PublisherPageRouteExtension._fromState,
+    );
 
 extension $PublisherPageRouteExtension on PublisherPageRoute {
   static PublisherPageRoute _fromState(GoRouterState state) =>
