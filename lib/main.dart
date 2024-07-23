@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nav_example/app/bloc/app_bloc.dart';
+import 'package:nav_example/app_router/app_router.dart';
 import 'package:nav_example/app_router/type_safe_router.dart';
 
 void main() {
@@ -26,20 +27,20 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // late final AppRouter _appRouter;
-  late final TypeSafeRouter _appRouter;
+  late final AppRouter _appRouter;
+  // late final TypeSafeRouter _appRouter;
 
   @override
   void initState() {
     super.initState();
 
-    // _appRouter = AppRouter(
-    //   navigatorKey: GlobalKey<NavigatorState>(),
-    // );
-
-    _appRouter = TypeSafeRouter(
+    _appRouter = AppRouter(
       navigatorKey: GlobalKey<NavigatorState>(),
     );
+
+    // _appRouter = TypeSafeRouter(
+    //   navigatorKey: GlobalKey<NavigatorState>(),
+    // );
   }
 
   @override
